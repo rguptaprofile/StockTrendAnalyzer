@@ -14,7 +14,7 @@ if _PARENT_DIR not in sys.path:
 # --- Core Bot Imports ---
 try:
     # Import the factory function to create agent components, not the components themselves.
-    from Stocktrender_Chatbot_Agent_UI import create_agent_services, ADK_AVAILABLE, USER_ID
+    from Stocktrender_Chatbot_Agent_Orchestrator import create_agent_services, ADK_AVAILABLE, USER_ID
     if ADK_AVAILABLE:
         from google.genai import types
     AGENT_FACTORY_AVAILABLE = True

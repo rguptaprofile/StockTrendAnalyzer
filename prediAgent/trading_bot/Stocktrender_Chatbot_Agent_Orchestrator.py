@@ -1,4 +1,4 @@
-"""chatbot_agent.py
+"""Stocktrender_Chatbot_Agent_Orchestrator.py
 
 Finalized script converted from the notebook. This version:
 - Guards ADK imports and prints installation guidance if missing.
@@ -8,7 +8,7 @@ Finalized script converted from the notebook. This version:
     they are async generators, sync generators, awaitables, or plain values.
 
 Usage:
-    python chatbot_agent.py
+    python Stocktrender_Chatbot_Agent_Orchestrator.py
 
 Notes:
     - If you have the ADK installed and API keys configured, the script will
