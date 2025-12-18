@@ -1,13 +1,21 @@
-import yfinance as yf
+try:
+    import yfinance as yf  # type: ignore
+except Exception:
+    # yfinance may not be installed in this environment; allow the module to load
+    yf = None
+
 import pandas as pd
 import numpy as np
 import warnings
 
 # Prefer statsmodels ARIMA if available, otherwise fall back to a lightweight predictor
 try:
-    from statsmodels.tsa.arima.model import ARIMA
+    import importlib
+    arima_mod = importlib.import_module("statsmodels.tsa.arima.model")
+    ARIMA = getattr(arima_mod, "ARIMA")
     _HAS_STATSMODELS = True
 except Exception:
+    ARIMA = None
     _HAS_STATSMODELS = False
 
 
